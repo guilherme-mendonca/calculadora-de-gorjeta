@@ -31,6 +31,7 @@ header {
 main {
     background-color: var(--white);
     padding: 2rem;
+    border-radius: 1.5625rem 1.5625 0 0;
 }
 
 .conta,
@@ -110,4 +111,35 @@ main {
 
 .pessoas #erro {
     display: none;
+}
+
+.resultados {
+    background-color: var(--green-800);
+    border-radius: 0.9375rem;
+    padding: 1.5rem;
+}
+
+.resultados div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resultados p {
+    color: var(--green-400);
+    font-size: 0.8125rem;
+}
+
+.resultados p strong {
+    color: var(--white);
+    font-size: 1rem;
+}
+
+.resultados div > strong {
+    color: var(--light-green);
+    font-size: 2rem;
+}
+
+.resultados .gorjeta-total {
+    margin-bottom: 1.25rem;
 }
