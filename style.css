@@ -2,8 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Space Mno", serif;
 }
-
 
 :root {
     --green-100: #f3f9fa;
@@ -26,4 +26,60 @@ header {
     display: flex;
     justify-content: center;
     padding-block: 2.8rem;
+}
+
+main {
+    background-color: var(--white);
+    padding: 2rem;
+}
+
+.conta {
+    margin-bottom: 2rem;
+}
+
+.conta label,
+.gorjeta label {
+    color: var(--green-500);
+    font-weight: 700;
+}
+
+.conta div {
+    margin-top: 0.4rem;
+    background-color: var(--green-100);
+    padding: 0.4rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.3125rem;
+}
+
+.conta input {
+    border: none;
+    text-align: right;
+    width: 100%;
+    background: none; 
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--green-800);
+    outline: none;
+}
+
+.conta input::placeholder {
+    color: var(--green-300);
+}
+
+.conta:has(input:focus) div { /*Quando o usuárior clickar em uma input eu vou colcoar outline*/
+    outline: 2px solid var(--light-green);
+}
+
+.gorjeta div {
+    margin-top: 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.gorjeta #outra {
+    width: 100%;
 }
