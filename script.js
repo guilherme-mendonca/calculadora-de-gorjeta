@@ -28,10 +28,10 @@ const divErro = document.querySelector(".pessoas .input-box")
 
 const botoesGorjeta = document.querySelectorAll(".gorjeta input[type='button']")
 botoesGorjeta.forEach(botao => { /* "forEach" O jS vai passar em cada um dos botões*/
-    botao.addEventListener("click", receberPorcentagemBotao)
+    botao.addEventListener("click", receberPorcentagem)
 })
 
-function receberPorcentagemBotao(evento) {
+function receberPorcentagem(evento) {
     botoesGorjeta.forEach(botao => {
         botao.classList.remove("botao-ativo") /*Qaundo você clikar em outo botão o anterior será removido*/
 
@@ -40,5 +40,14 @@ function receberPorcentagemBotao(evento) {
         }
     })
 
-    porcentagem = parseFloat(evento.target.value) / 100    
+    if(evento.target.value !== "") {
+        porcentagem = parseFloat(evento.target.value) / 100  
+    } else {
+        porcentagem = 0
+    }
+
+    console.log(porcentagem)
 }
+
+const gorjetaInput = document.querySelector("#outra")
+gorjetaInput.addEventListener("input", receberPorcentagem)
